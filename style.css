@@ -479,3 +479,192 @@ p{
 .contact .btn:hover{
     scale: 1.1;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: green;
+    border-radius: 10px; 
+    border: 3px solid #fff;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 10px; 
+}
+
+
+
+
+
+/* نطاق الشاشات الصغيرة (أقل من 768 بكسل) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        height: 70px;
+        padding: 0 10px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav .logo img {
+        width: 150px;
+    }
+
+    header nav .links,
+    header nav .icons {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 70px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .div_text,
+    .hero .div_img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero .div_img {
+        border-radius: 0;
+    }
+
+    .hero .div_text h4 {
+        font-size: 24px;
+    }
+
+    .hero .div_text h1,
+    .hero .div_text h2 {
+        font-size: 36px;
+    }
+
+    .hero .div_text p {
+        width: 100%;
+    }
+
+    .btns {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .btn,
+    .btn_no_bg {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .about .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about .div_text,
+    .about .div_img {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .about .div_text ul {
+        flex-direction: column;
+    }
+
+    .about .div_text ul li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .service .boxs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service .boxs .box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .projects .project_box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .projects .project_box img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .projects .project_box .text {
+        margin: 0;
+        width: 100%;
+    }
+
+    .projects .project_box .text h3 {
+        font-size: 30px;
+    }
+
+    
+    .projects .project_box.project_box2 {
+        flex-direction: column; /* إعادة التعيين إلى عمودي على الشاشات الصغيرة */
+    }
+
+    .contact .container {
+        flex-direction: column;
+    }
+
+    .contact .social_contact,
+    .contact form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact form .inpts_form input {
+        width: 100%;
+    }
+}
+
+/* نطاق الشاشات المتوسطة (من 768 بكسل إلى 1023 بكسل) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .service .boxs .box {
+        width: 48%;
+    }
+
+    .projects .project_box .text {
+        margin-left: 50px;
+        width: calc(50% - 50px);
+    }
+    /* تطبيق row-reverse فقط على الشاشات المتوسطة والكبيرة */
+    .projects .project_box.project_box2 {
+        flex-direction: row-reverse;
+    }
+}
+
+/* نطاق الشاشات الكبيرة (أكبر من 1024 بكسل) */
+@media (min-width: 1024px) {
+    /* تطبيق row-reverse فقط على الشاشات المتوسطة والكبيرة */
+    .projects .project_box.project_box2 {
+        flex-direction: row-reverse;
+    }
+  
+}
